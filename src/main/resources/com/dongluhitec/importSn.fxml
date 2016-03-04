@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:id="rootPane" hgap="5.0" maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dongluhitec.SoftDogController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" />
+        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="+Infinity" minWidth="-Infinity" />
+    </columnConstraints>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+   <children>
+   
+       <VBox maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" prefWidth="400.0" spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+      <children>
+              <Label fx:id="messageLabel" text="注册码" textAlignment="LEFT" wrapText="true">
+                  <font>
+                      <Font name="System Bold" size="17.0" />
+                  </font>
+              </Label>
+              <Label fx:id="detailsLabel" text="东陆一卡通管理平台为商业性质的软件，为了获得更好的服务，请务必向开发商注册。如果仅作演示，有10天试用期。" textAlignment="LEFT" wrapText="true">
+                  <font>
+                      <Font size="12.0" />
+                  </font>
+              </Label>
+      </children>
+       </VBox>
+       <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+          <children>
+              <Label text="输入注册码" />
+              <Button mnemonicParsing="false" onAction="#selectSnFile" text="选择文件" />
+          </children>
+       </HBox>
+       <TextArea fx:id="tx_snContent" prefHeight="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+       <Label text="授权信息" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+       <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+          <children>
+              <Label text="公司名称" />
+              <TextField fx:id="txt_companyName" HBox.hgrow="ALWAYS" />
+              <Label text="项目名称" />
+              <TextField fx:id="txt_projectName" HBox.hgrow="ALWAYS" />
+          </children>
+       </HBox>
+       <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+          <children>
+              <Label text="授权模块" />
+              <TextField fx:id="txt_models" HBox.hgrow="ALWAYS" />
+          </children>
+       </HBox>
+       <HBox alignment="CENTER_RIGHT" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+           <GridPane.margin>
+               <Insets right="20.0" />
+           </GridPane.margin>
+          <children>
+              <Button mnemonicParsing="false" onAction="#yes_onAction" text="确定" />
+              <Button mnemonicParsing="false" onAction="#no_onAction" text="取消" />
+          </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+       </HBox>
+   </children>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
